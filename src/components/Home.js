@@ -22,11 +22,11 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-22 lg:py-50">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Announcing our next round of funding.{' '}
-              <a href="#" className="font-semibold text-indigo-600">
+            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-gray-100/10 hover:ring-gray-900/20">
+               Visita il mio GitHub.{' '}
+              <a href="https://github.com/SeriumTW" target="_blank" className="font-semibold text-indigo-600">
                 <span className="absolute inset-0" aria-hidden="true" />
-                Read more <span aria-hidden="true">&rarr;</span>
+                Clicca qui <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
@@ -63,21 +63,42 @@ export default function Home() {
           />
         </div>
       </div>
-
-      <div className="bg-gray-800 py-10 sm:py-10">
+      <div className="bg-gray-900 py-10 sm:py-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-lg font-semibold leading-8 text-gray-100">
-          Con i migliori strumenti Framework e tecnologie! 
+
+        <p className="text-center text-xs font-semibold mb-5 text-gray-600">
+          "Non sono elencate tutte le mie conoscenze, ma solo quelle che uso più frequentemente. 🙃"
+        </p>
+        
+        <h2 className="text-center text-lg font-semibold leading-10 text-gray-100">
+          Con i migliori strumenti Framework e tecnologie!
         </h2>
         <div className="mx-auto mt-10 grid max-w-lg grid-cols-6 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none">
-            <FontAwesomeIcon icon={faReact} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white" />
-            <FontAwesomeIcon icon={faAngular} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white" />
-            <FontAwesomeIcon icon={faVuejs} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white" />
-            <FontAwesomeIcon icon={faSass} className="col-span-2 h-12 w-full object-contain sm:col-start-2 lg:col-span-1 text-white" />
-            <FontAwesomeIcon icon={faHtml5} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white" />
-            <FontAwesomeIcon icon={faJsSquare} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white" />
-          </div>
+          <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di React">
+            <FontAwesomeIcon icon={faReact} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
+          </a>
+          <a href="https://angular.io/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di Angular">
+            <FontAwesomeIcon icon={faAngular} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
+          </a>
+          <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di Vue.js">
+            <FontAwesomeIcon icon={faVuejs} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
+          </a>
+          <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di Sass">
+            <FontAwesomeIcon icon={faSass} className="col-span-2 h-12 w-full object-contain sm:col-start-2 lg:col-span-1 text-white hover:text-indigo-600" />
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di HTML5">
+            <FontAwesomeIcon icon={faHtml5} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di JavaScript">
+            <FontAwesomeIcon icon={faJsSquare} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
+          </a>
+          
+        </div>
+
+
       </div>
+      
+
     </div>
     </div>
 
