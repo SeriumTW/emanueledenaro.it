@@ -1,6 +1,10 @@
 import React from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { faReact, faAngular, faVuejs, faSass, faHtml5, faJsSquare } from '@fortawesome/free-brands-svg-icons'
 
 export default function Home() {
+
   return (
     <div className="bg-gray-800">
       <div className="relative isolate px-6 pt-16 lg:px-8">
@@ -16,7 +20,7 @@ export default function Home() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-50">
+        <div className="mx-auto max-w-2xl py-32 sm:py-22 lg:py-50">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Announcing our next round of funding.{' '}
@@ -59,6 +63,24 @@ export default function Home() {
           />
         </div>
       </div>
+
+      <div className="bg-gray-800 py-10 sm:py-10">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 className="text-center text-lg font-semibold leading-8 text-gray-100">
+          Con i migliori strumenti Framework e tecnologie! 
+        </h2>
+        <div className="mx-auto mt-10 grid max-w-lg grid-cols-6 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none">
+            <FontAwesomeIcon icon={faReact} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white" />
+            <FontAwesomeIcon icon={faAngular} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white" />
+            <FontAwesomeIcon icon={faVuejs} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white" />
+            <FontAwesomeIcon icon={faSass} className="col-span-2 h-12 w-full object-contain sm:col-start-2 lg:col-span-1 text-white" />
+            <FontAwesomeIcon icon={faHtml5} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white" />
+            <FontAwesomeIcon icon={faJsSquare} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white" />
+          </div>
+      </div>
     </div>
+    </div>
+
+    
   )
 }
