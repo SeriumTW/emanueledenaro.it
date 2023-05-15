@@ -1,13 +1,24 @@
-import React from "react"
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import { faReact, faAngular, faVuejs, faSass, faHtml5, faJsSquare } from '@fortawesome/free-brands-svg-icons'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // puoi anche utilizzare un file CSS personalizzato se preferisci
+
 
 export default function Home() {
 
+  useEffect(() => {
+    AOS.init({
+      // puoi configurare `aos` qui. Ad esempio:
+      duration: 1500, // durata dell'animazione in millisecondi
+      delay: 500, // ritardo dell'animazione in millisecondi
+    });
+  }, []);
+
   return (
     <div className="bg-gray-800">
-      <div className="relative isolate px-6 pt-16 lg:px-8">
+      <div className="relative isolate px-6 pt-48 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -20,7 +31,7 @@ export default function Home() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-22 lg:py-50">
+        <div data-aos="zoom-in" className="mx-auto max-w-2xl py-32 sm:py-22 lg:py-50">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-gray-100/10 hover:ring-gray-900/20">
                Visita il mio GitHub.{' '}
@@ -63,16 +74,16 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="bg-gray-900 py-10 sm:py-10">
+      <div  className="bg-gray-900 py-10 sm:py-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <p className="text-center text-xs font-semibold mb-5 text-gray-600">
+          <p data-aos="fade-up" className="text-center text-xs font-semibold mb-5 text-gray-600">
             "Non sono elencate tutte le mie conoscenze, ma solo quelle che uso più frequentemente. 🙃"
           </p>
           
-          <h2 className="text-center text-lg font-semibold leading-10 text-gray-100">
+          <h2 data-aos="fade-up" className="text-center text-lg font-semibold leading-10 text-gray-100">
             Con i migliori strumenti Framework e tecnologie!
           </h2>
-          <div className="mx-auto mt-10 grid max-w-lg grid-cols-6 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none">
+          <div data-aos="fade-up" className="mx-auto mt-10 grid max-w-lg grid-cols-6 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none">
             <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di React">
               <FontAwesomeIcon icon={faReact} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
             </a>
