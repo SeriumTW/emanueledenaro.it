@@ -31,7 +31,15 @@ export default function Home() {
             }}
           />
         </div>
-        <div data-aos="zoom-in" className="mx-auto max-w-2xl py-32 sm:py-22 lg:py-50">
+
+            {/* creami un immagine al centro dello schermo */}
+            <img
+              className="h-64 w-auto mx-auto glass float-animation"
+              src="https://cdn.discordapp.com/attachments/1105244250901319694/1107812999483363338/pngwing.com.png"
+              alt=""
+            />
+
+        <div data-aos="zoom-in" className="mx-auto max-w-2xl py-14 sm:py-22 lg:py-50">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-gray-100/10 hover:ring-gray-900/20">
                Visita il mio GitHub.{' '}
