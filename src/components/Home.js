@@ -35,17 +35,17 @@ export default function Home() {
                 Benvenuti nel mondo di Emanuele.
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-400">
-            "Come programmatore junior front end, mi impegno a trasformare il design in esperienze interattive coinvolgenti, sfruttando le mie competenze tecniche e la passione per l'innovazione digitale, per creare soluzioni web intuitive che lasciano un'impronta duratura."
+            "Come programmatore Front-End, mi impegno a trasformare il design in esperienze interattive coinvolgenti, sfruttando le mie competenze tecniche e la passione per l'innovazione digitale, per creare soluzioni web intuitive che lasciano un'impronta duratura."
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Get started
+                Contattami
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                Learn more <span aria-hidden="true">→</span>
+              <a href="#" className="text-sm font-semibold leading-6 text-gray-300">
+                Clicca qui <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
@@ -64,38 +64,34 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-gray-900 py-10 sm:py-10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
-        <p className="text-center text-xs font-semibold mb-5 text-gray-600">
-          "Non sono elencate tutte le mie conoscenze, ma solo quelle che uso più frequentemente. 🙃"
-        </p>
-        
-        <h2 className="text-center text-lg font-semibold leading-10 text-gray-100">
-          Con i migliori strumenti Framework e tecnologie!
-        </h2>
-        <div className="mx-auto mt-10 grid max-w-lg grid-cols-6 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none">
-          <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di React">
-            <FontAwesomeIcon icon={faReact} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
-          </a>
-          <a href="https://angular.io/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di Angular">
-            <FontAwesomeIcon icon={faAngular} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
-          </a>
-          <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di Vue.js">
-            <FontAwesomeIcon icon={faVuejs} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
-          </a>
-          <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di Sass">
-            <FontAwesomeIcon icon={faSass} className="col-span-2 h-12 w-full object-contain sm:col-start-2 lg:col-span-1 text-white hover:text-indigo-600" />
-          </a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di HTML5">
-            <FontAwesomeIcon icon={faHtml5} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
-          </a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di JavaScript">
-            <FontAwesomeIcon icon={faJsSquare} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
-          </a>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <p className="text-center text-xs font-semibold mb-5 text-gray-600">
+            "Non sono elencate tutte le mie conoscenze, ma solo quelle che uso più frequentemente. 🙃"
+          </p>
           
-        </div>
-
-
+          <h2 className="text-center text-lg font-semibold leading-10 text-gray-100">
+            Con i migliori strumenti Framework e tecnologie!
+          </h2>
+          <div className="mx-auto mt-10 grid max-w-lg grid-cols-6 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none">
+            <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di React">
+              <FontAwesomeIcon icon={faReact} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
+            </a>
+            <a href="https://angular.io/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di Angular">
+              <FontAwesomeIcon icon={faAngular} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
+            </a>
+            <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di Vue.js">
+              <FontAwesomeIcon icon={faVuejs} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
+            </a>
+            <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di Sass">
+              <FontAwesomeIcon icon={faSass} className="col-span-2 h-12 w-full object-contain sm:col-start-2 lg:col-span-1 text-white hover:text-indigo-600" />
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di HTML5">
+              <FontAwesomeIcon icon={faHtml5} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank" rel="noopener noreferrer" title="Vai alla documentazione di JavaScript">
+              <FontAwesomeIcon icon={faJsSquare} className="col-span-2 h-12 w-full object-contain lg:col-span-1 text-white hover:text-indigo-600" />
+            </a>
+          </div>
       </div>
       
 

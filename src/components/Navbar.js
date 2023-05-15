@@ -6,8 +6,7 @@ import { Link } from 'react-scroll';
 const navigation = [
     { name: 'Home', href: 'home' },
     { name: 'Curriculum', href: 'curriculum' },
-    { name: 'Widecode', href: 'widecode' },
-    { name: 'Contact', href: 'contact' },
+    { name: 'Contact Me', href: 'contact' },
 ]
 
 export default function Navbar() {
