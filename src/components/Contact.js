@@ -12,7 +12,17 @@ function Contact() {
   const [state, handleSubmit] = useForm("mzbqwyla");
 
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return (
+      <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div className="text-center mx-auto rounded-lg shadow bg-gray-900 m-4 px-6 py-4 sm:py-4 ">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84dc13b7-a2e7-4b45-83ec-311e72e82900/dca2jpv-ac134579-2076-4991-a008-49d4ebb61075.png/v1/fill/w_512,h_512/goku_render_7__fighter_z__by_maxiuchiha22_dca2jpv-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTEyIiwicGF0aCI6IlwvZlwvODRkYzEzYjctYTJlNy00YjQ1LTgzZWMtMzExZTcyZTgyOTAwXC9kY2EyanB2LWFjMTM0NTc5LTIwNzYtNDk5MS1hMDA4LTQ5ZDRlYmI2MTA3NS5wbmciLCJ3aWR0aCI6Ijw9NTEyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.uDsQdBbesIWVmqhqNL2pCyRGLzIH2VcaetAF3YL1QNg" className=" mx-auto h-50" alt="Flowbite Logo" />
+          <h2 className="mx-auto text-indigo-600 font-bold">
+            Dati inviati al destinatario ✅
+          </h2 >
+          <p className="mx-auto text-indigo-300">Buona giornata</p>
+        </div>
+      </div>
+    )
 }
 
   return (
@@ -180,7 +190,7 @@ function Contact() {
               </Switch>
             </div>
             <Switch.Label className="text-sm leading-6 text-gray-600">
-              By selecting this, you agree to our{' '}
+            Selezionando questo, accetti le nostre{' '}
               <a href="#" className="font-semibold text-indigo-600">
                 privacy&nbsp;policy
               </a>

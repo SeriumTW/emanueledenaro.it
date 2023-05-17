@@ -8,13 +8,13 @@ export default function Cv() {
   useEffect(() => {
     AOS.init({
       // puoi configurare `aos` qui. Ad esempio:
-      duration: 1500, // durata dell'animazione in millisecondi
-      delay: 500, // ritardo dell'animazione in millisecondi
+      duration: 1000, // durata dell'animazione in millisecondi
+      delay: 0, // ritardo dell'animazione in millisecondi
     });
   }, []);
 
   return (
-    <div className=' m-10 lg:m-28 '>
+    <div className="px-6 py-24 sm:py-32 lg:px-8  lg:mx-44">
       <div data-aos="zoom-in" className="px-4 sm:px-0">
         <h1 className=" font-bold leading-7 text-white">Curriculum abbreviativo</h1>
         <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Informazioni Professionali</p>

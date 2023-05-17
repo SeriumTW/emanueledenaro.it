@@ -11,8 +11,8 @@ export default function Home() {
   useEffect(() => {
     AOS.init({
       // puoi configurare `aos` qui. Ad esempio:
-      duration: 1500, // durata dell'animazione in millisecondi
-      delay: 500, // ritardo dell'animazione in millisecondi
+      duration: 1000, // durata dell'animazione in millisecondi
+      delay: 0, // ritardo dell'animazione in millisecondi
     });
   }, []);
 
@@ -40,7 +40,7 @@ export default function Home() {
             />
 
         <div data-aos="zoom-in" className="mx-auto max-w-2xl py-14 sm:py-22 lg:py-50">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div className="sm:mb-8 mb-8 sm:flex sm:justify-center text-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-gray-100/10 hover:ring-gray-900/20">
                Visita il mio GitHub.{' '}
               <a href="https://github.com/SeriumTW" target="_blank" className="font-semibold text-indigo-600">
