@@ -13,20 +13,20 @@ function Contact() {
 
   if (state.succeeded) {
     return (
-      <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <div className="text-center mx-auto rounded-lg shadow bg-gray-900 m-4 px-6 py-4 sm:py-4 ">
-          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84dc13b7-a2e7-4b45-83ec-311e72e82900/dca2jpv-ac134579-2076-4991-a008-49d4ebb61075.png/v1/fill/w_512,h_512/goku_render_7__fighter_z__by_maxiuchiha22_dca2jpv-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTEyIiwicGF0aCI6IlwvZlwvODRkYzEzYjctYTJlNy00YjQ1LTgzZWMtMzExZTcyZTgyOTAwXC9kY2EyanB2LWFjMTM0NTc5LTIwNzYtNDk5MS1hMDA4LTQ5ZDRlYmI2MTA3NS5wbmciLCJ3aWR0aCI6Ijw9NTEyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.uDsQdBbesIWVmqhqNL2pCyRGLzIH2VcaetAF3YL1QNg" className=" mx-auto h-50" alt="Flowbite Logo" />
-          <h2 className="mx-auto text-indigo-600 font-bold">
-            Dati inviati al destinatario ✅
+      <div className=" bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div className=" text-center mx-auto px-6 bg-gray-900 py-4 sm:py-4 ">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84dc13b7-a2e7-4b45-83ec-311e72e82900/dca2jpv-ac134579-2076-4991-a008-49d4ebb61075.png/v1/fill/w_512,h_512/goku_render_7__fighter_z__by_maxiuchiha22_dca2jpv-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTEyIiwicGF0aCI6IlwvZlwvODRkYzEzYjctYTJlNy00YjQ1LTgzZWMtMzExZTcyZTgyOTAwXC9kY2EyanB2LWFjMTM0NTc5LTIwNzYtNDk5MS1hMDA4LTQ5ZDRlYmI2MTA3NS5wbmciLCJ3aWR0aCI6Ijw9NTEyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.uDsQdBbesIWVmqhqNL2pCyRGLzIH2VcaetAF3YL1QNg" className=" bg-white rounded-full mx-auto h-50" alt="Flowbite Logo" />
+          <h2 className="mx-auto text-indigo-600 py-5 font-bold">
+            Dati inviati al destinatario.
           </h2 >
-          <p className="mx-auto text-indigo-300">Buona giornata</p>
+          <p className="mx-auto text-white">Buona giornata.</p>
         </div>
       </div>
     )
 }
 
   return (
-    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8" id="contattami">
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
@@ -191,11 +191,10 @@ function Contact() {
             </div>
             <Switch.Label className="text-sm leading-6 text-gray-600">
             Selezionando questo, accetti le nostre{' '}
-              <a href="#" className="font-semibold text-indigo-600">
+            </Switch.Label>
+            <a href="https://www.freeprivacypolicy.com/live/a53a17f1-2f4d-4de3-958e-7ef25a77f23a" className="font-semibold text-indigo-600" target="_blank" rel="noreferrer">
                 privacy&nbsp;policy
               </a>
-              .
-            </Switch.Label>
           </Switch.Group>
         </div>
         <div className="mt-10">
