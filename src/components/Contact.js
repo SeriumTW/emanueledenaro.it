@@ -29,10 +29,10 @@ function Contact() {
 
     if (!agreed) {
       toast.error('Devi accettare la privacy policy per inviare il messaggio!');
-      return;
+    }else{
+      setInitialSubmit(true); // Setting the initial submit to true when submit button is clicked
+      handleSubmit(event); // Calling your handleSubmit method
     }
-    setInitialSubmit(true); // Setting the initial submit to true when submit button is clicked
-    handleSubmit(event); // Calling your handleSubmit method
   }
 
   return (
@@ -237,9 +237,6 @@ function Contact() {
           </a>
         </div>
       </form>
-
-
-
     </div>
   )
 }
