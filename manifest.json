@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "emanueledenaro.it",
+  "name": "Portfolio di Emanuele Denaro",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://media.discordapp.net/attachments/1105244250901319694/1107433418368761956/output-onlinepngtools.png?width=1412&height=1012",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
