@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
 import { useForm, ValidationError } from '@formspree/react';
+import { toast } from 'react-toastify';
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -10,20 +12,28 @@ function classNames(...classes) {
 function Contact() {
   const [agreed, setAgreed] = useState(false)
   const [state, handleSubmit] = useForm("mzbqwyla");
+  const [initialSubmit, setInitialSubmit] = useState(false); // New line
 
-  if (state.succeeded) {
-    return (
-      <div className=" bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <div className=" text-center mx-auto px-6 bg-gray-900 py-4 sm:py-4 ">
-          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84dc13b7-a2e7-4b45-83ec-311e72e82900/dca2jpv-ac134579-2076-4991-a008-49d4ebb61075.png/v1/fill/w_512,h_512/goku_render_7__fighter_z__by_maxiuchiha22_dca2jpv-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTEyIiwicGF0aCI6IlwvZlwvODRkYzEzYjctYTJlNy00YjQ1LTgzZWMtMzExZTcyZTgyOTAwXC9kY2EyanB2LWFjMTM0NTc5LTIwNzYtNDk5MS1hMDA4LTQ5ZDRlYmI2MTA3NS5wbmciLCJ3aWR0aCI6Ijw9NTEyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.uDsQdBbesIWVmqhqNL2pCyRGLzIH2VcaetAF3YL1QNg" className=" bg-white rounded-full mx-auto h-50" alt="Flowbite Logo" />
-          <h2 className="mx-auto text-indigo-600 py-5 font-bold">
-            Dati inviati al destinatario.
-          </h2 >
-          <p className="mx-auto text-white">Buona giornata.</p>
-        </div>
-      </div>
-    )
-}
+  useEffect(() => {
+    if (initialSubmit) { // Checking if the form has been submitted initially
+      if (state.succeeded) {
+        
+        toast.success('Il tuo messaggio è stato inviato!');
+      } else if (state.errors.length > 0) {
+        toast.error('Qualcosa è andato storto, riprova più tardi!');
+      }
+    }
+  }, [state.succeeded, initialSubmit]); // Added initialSubmit to the dependencies
+
+  const onSubmit = async (event) => { // New onSubmit method
+
+    if (!agreed) {
+      toast.error('Devi accettare la privacy policy per inviare il messaggio!');
+      return;
+    }
+    setInitialSubmit(true); // Setting the initial submit to true when submit button is clicked
+    handleSubmit(event); // Calling your handleSubmit method
+  }
 
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8" id="contattami">
@@ -42,10 +52,10 @@ function Contact() {
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-indigo-600 sm:text-4xl">Contattami</h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
+        "Sei interessato a collaborare o vuoi saperne di più sul mio lavoro? Non esitare a contattarmi! Sarei felice di rispondere a qualsiasi domanda tu possa avere e di discutere su come posso contribuire al tuo progetto."
         </p>
       </div>
-      <form onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form onSubmit={onSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
@@ -63,6 +73,8 @@ function Contact() {
                 prefix="First-name" 
                 field="first-name"
                 errors={state.errors}
+                className="text-red-500"
+                
               />
             </div>
           </div>
@@ -132,9 +144,17 @@ function Contact() {
                   name="country"
                   className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
                 >
+                  <option>IT</option>
                   <option>US</option>
                   <option>CA</option>
-                  <option>EU</option>
+                  <option>ES</option>
+                  <option>BR</option>
+                  <option>JP</option>
+                  <option>FR</option>
+                  <option>DE</option>
+                  <option>UK</option>
+                  <option>ALTRO</option>
+
                 </select>
                 <ChevronDownIcon
                   className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
@@ -199,14 +219,27 @@ function Contact() {
         </div>
         <div className="mt-10">
           <button
-              disabled={!agreed || state.submitting}
+              disabled={state.submitting}
               type="submit"
               className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
               Invia!
           </button>
         </div>
+        <div className="mt-10">
+          <h2 className="text-2xl text-center font-semibold text-gray-900">Oppure</h2>
+        </div>
+
+        {/* CREAMI un componente per whatsapp business */}
+        <div className="mt-10 mx-auto max-w-2xl text-center">
+          <a href="https://wa.me/message/BR5B37F2EG4EH1" className="block rounded-md bg-green-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600" target="_blank" rel="noreferrer">
+            Contattami su Whatsapp
+          </a>
+        </div>
       </form>
+
+
+
     </div>
   )
 }
