@@ -57,7 +57,7 @@ function Contact() {
         "Sei interessato a collaborare o vuoi saperne di più sul mio lavoro? Non esitare a contattarmi! Sarei felice di rispondere a qualsiasi domanda tu possa avere e di discutere su come posso contribuire al tuo progetto."
         </p>
       </div>
-      <form onSubmit={onSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
@@ -221,7 +221,7 @@ function Contact() {
         <div className="mt-10">
           <button
               disabled={state.submitting}
-              type="submit"
+              onClick={onSubmit}
               className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
               Invia!
