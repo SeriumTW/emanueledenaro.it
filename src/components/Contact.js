@@ -27,6 +27,8 @@ function Contact() {
 
   const onSubmit = async (event) => { // New onSubmit method
 
+    event.preventDefault(); // Prevent the default form submit action
+
     if (!agreed) {
       toast.error('Devi accettare la privacy policy per inviare il messaggio!');
     }else{
@@ -153,7 +155,6 @@ function Contact() {
                   <option>FR</option>
                   <option>DE</option>
                   <option>UK</option>
-                  <option>ALTRO</option>
 
                 </select>
                 <ChevronDownIcon
