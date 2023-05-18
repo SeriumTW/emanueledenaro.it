@@ -31,10 +31,11 @@ function Contact() {
 
     if (!agreed) {
       toast.error('Devi accettare la privacy policy per inviare il messaggio!');
-    }else{
+      return;
+    }
       setInitialSubmit(true); // Setting the initial submit to true when submit button is clicked
       handleSubmit(event); // Calling your handleSubmit method
-    }
+
   }
 
   return (
