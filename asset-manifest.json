@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/emanueledenaro.it/static/css/main.3eac76ad.css",
-    "main.js": "/emanueledenaro.it/static/js/main.53f8f1a1.js",
+    "main.js": "/emanueledenaro.it/static/js/main.c3bf5e4f.js",
     "static/js/787.c70000a6.chunk.js": "/emanueledenaro.it/static/js/787.c70000a6.chunk.js",
     "index.html": "/emanueledenaro.it/index.html",
     "main.3eac76ad.css.map": "/emanueledenaro.it/static/css/main.3eac76ad.css.map",
-    "main.53f8f1a1.js.map": "/emanueledenaro.it/static/js/main.53f8f1a1.js.map",
+    "main.c3bf5e4f.js.map": "/emanueledenaro.it/static/js/main.c3bf5e4f.js.map",
     "787.c70000a6.chunk.js.map": "/emanueledenaro.it/static/js/787.c70000a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3eac76ad.css",
-    "static/js/main.53f8f1a1.js"
+    "static/js/main.c3bf5e4f.js"
   ]
 }
