@@ -1,7 +1,7 @@
 {
   "homepage": "https://seriumtw.github.io/emanueledenaro.it/",
   "name": "emanueledenaro.it",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@formspree/react": "^2.4.1",
