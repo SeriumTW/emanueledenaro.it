@@ -4,9 +4,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-scroll';
 
 const navigation = [
-    { name: 'Home', href: 'home' },
     { name: 'Curriculum', href: 'curriculum' },
-    { name: 'Contact Me', href: 'contact' },
+    { name: 'Contattami', href: 'contattami' },
 ]
 
 export default function Navbar() {

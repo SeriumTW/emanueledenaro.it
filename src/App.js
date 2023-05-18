@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Cv from './components/Cv';
 import Contact from './components/Contact';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Cv />
         <Contact />
         <Footer/>
+        <ScrollToTopButton />
     </div>
   );
 }

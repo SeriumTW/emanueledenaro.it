@@ -14,7 +14,7 @@ export default function Cv() {
   }, []);
 
   return (
-    <div className="px-6 py-24 sm:py-32 lg:px-8  lg:mx-44">
+    <div className="px-6 py-24 sm:py-32 lg:px-8  lg:mx-44" id='curriculum'>
       <div data-aos="zoom-in" className="px-4 sm:px-0">
         <h1 className=" font-bold leading-7 text-white">Curriculum abbreviativo</h1>
         <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Informazioni Professionali</p>
