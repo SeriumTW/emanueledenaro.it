@@ -23,7 +23,7 @@ function Contact() {
         toast.error('Qualcosa è andato storto, riprova più tardi!');
       }
     }
-  }, [state.succeeded, initialSubmit]); // Added initialSubmit to the dependencies
+  }, [state.succeeded, initialSubmit, state.errors.length]); // Added initialSubmit to the dependencies
 
   const onSubmit = async (event) => { // New onSubmit method
 
