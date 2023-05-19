@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Personal Website - emanueledenaro.it
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my first website built with React.js and Tailwind CSS. The site is a personal project that has allowed me to learn and put into practice my front-end development skills.
 
-## Available Scripts
+## Tools and Technologies Used
 
-In the project directory, you can run:
+- React.js
+- Tailwind CSS
+- And a series of other dependencies, which include:
 
-### `npm start`
+### Dependencies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `@formspree/react`: This library allows you to send emails directly from a website using Formspree, a contact form service.
+- `@fortawesome/fontawesome-svg-core`, `@fortawesome/free-brands-svg-icons`, `@fortawesome/free-solid-svg-icons`, `@fortawesome/react-fontawesome`: These packages are part of FontAwesome, a popular icon library. They allow you to easily use FontAwesome icons in your React project.
+- `@headlessui/react`: This is a completely unstyled collection of React components that can be used to build interactive user interfaces. They are "headless" (no default interface) so you can style them however you want.
+- `@heroicons/react`: This is an icon library developed by the same creators of Tailwind CSS. It contains a set of icons that integrate well with Tailwind projects.
+- `@tailwindcss/forms`: This plugin for Tailwind CSS provides a series of helpful CSS classes for styling forms.
+- `@testing-library/jest-dom`, `@testing-library/react`, `@testing-library/user-event`: These packages are part of Testing Library, a set of tools very useful for testing the output of React code. `jest-dom` offers custom assertions for Jest, `react` is the React specific testing library, and `user-event` simulates user events for testing.
+- `aos`: AOS stands for "Animate On Scroll". It is a small library that allows you to animate elements as you scroll the page.
+- `react`: React is a JavaScript library for building user interfaces. It's the basis of your project.
+- `react-dom`: This library is used to manipulate the DOM in the web page with React. It is used in conjunction with React.
+- `react-scripts`: This is a set of scripts from the Create React App project that include commands for building, testing, and starting a React application.
+- `react-scroll`: This library allows you to create smooth scrolling between your page's components.
+- `react-toastify`: It is used to add toast notifications to your website. Toast notifications are those small messages that generally appear at the top or bottom right of the screen.
+- `web-vitals`: This package provides utilities for measuring Web Vitals, important metrics for user experience on the web, such as loading time, interactivity, etc.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### DevDependencies:
 
-### `npm test`
+- `gh-pages`
+- `tailwindcss`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+To run the project locally, clone the repository and install the dependencies with the following command:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/username/emanueledenaro.it.git
+cd emanueledenaro.it
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation of Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After cloning the project, you will need to install the project's dependencies. This is possible thanks to Node.js and npm (Node Package Manager).
 
-### `npm run eject`
+First of all, make sure you have Node.js and npm installed on your computer. You can download Node.js and npm from the [official website](https://nodejs.org/). Installing Node.js should also include npm.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To check if Node.js and npm are installed correctly, open the terminal and type:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+node -v
+npm -v
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+These commands should show the installed versions of Node.js and npm.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Once confirmed that Node.js and npm are installed, navigate to the
 
-## Learn More
+project directory (where the `package.json` file is located) and type the following command to install the dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This command will read the `package.json` file and automatically install all listed dependencies.
 
-### Code Splitting
+When the installation is complete, you can start the development server with the command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+Now you should be able to see your website running on your local machine, typically at [http://localhost:3000](http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contribution
 
-### Making a Progressive Web App
+Suggestions and contributions are always welcome! Feel free to open an issue or make a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is distributed under the MIT license.
