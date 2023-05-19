@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Cv from './components/Cv';
 import Contact from './components/Contact';
-import ScrollToTopButton from './components/ScrollToTopButton';
 import SocialSidebar from './components/SocialSidebar';
 import { ToastContainer } from 'react-toastify';
 
@@ -17,7 +16,6 @@ function App() {
         <Cv />
         <Contact />
         <Footer/>
-        <ScrollToTopButton />
         <SocialSidebar />
         <ToastContainer />
     </div>
