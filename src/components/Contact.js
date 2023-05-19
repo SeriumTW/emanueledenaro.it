@@ -3,7 +3,8 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
 import { useForm, ValidationError } from '@formspree/react';
 import { toast } from 'react-toastify';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -12,29 +13,36 @@ function classNames(...classes) {
 function Contact() {
   const [agreed, setAgreed] = useState(false)
   const [state, handleSubmit] = useForm("mzbqwyla");
-  const [initialSubmit, setInitialSubmit] = useState(false); // New line
+  const [initialSubmit, setInitialSubmit] = useState(false);
 
   useEffect(() => {
-    if (initialSubmit) { // Checking if the form has been submitted initially
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+    });
+  }, []);
+
+  useEffect(() => {
+    if (initialSubmit) {
       if (state.succeeded) {
         
         toast.success('Il tuo messaggio è stato inviato!');
       } else if (state.errors.length > 0) {
-        toast.error('Qualcosa è andato storto, riprova più tardi!');
+        toast.error('Qualcosa è andato storto, riprova più tardi!'); 
       }
     }
-  }, [state.succeeded, initialSubmit, state.errors.length]); // Added initialSubmit to the dependencies
+  }, [state.succeeded, initialSubmit, state.errors.length]);
 
-  const onSubmit = async (event) => { // New onSubmit method
+  const onSubmit = async (event) => {
 
-    event.preventDefault(); // Prevent the default form submit action
+    event.preventDefault();
 
     if (!agreed) {
       toast.error('Devi accettare la privacy policy per inviare il messaggio!');
       return;
     }
-      setInitialSubmit(true); // Setting the initial submit to true when submit button is clicked
-      handleSubmit(event); // Calling your handleSubmit method
+      setInitialSubmit(true);
+      handleSubmit(event);
 
   }
 
@@ -53,14 +61,14 @@ function Contact() {
         />
       </div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-indigo-600 sm:text-4xl">Contattami</h2>
-        <p className="mt-2 text-lg leading-8 text-gray-600">
+        <h2 data-aos="zoom-in" className="text-3xl font-bold tracking-tight text-indigo-600 sm:text-4xl">Contattami</h2>
+        <p data-aos="zoom-in" className="mt-2 text-lg leading-8 text-gray-600">
         "Sei interessato a collaborare o vuoi saperne di più sul mio lavoro? Non esitare a contattarmi! Sarei felice di rispondere a qualsiasi domanda tu possa avere e di discutere su come posso contribuire al tuo progetto."
         </p>
       </div>
-      <form className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form onSubmit={onSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div>
+          <div data-aos="zoom-in">
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
               Nome
             </label>
@@ -81,7 +89,7 @@ function Contact() {
               />
             </div>
           </div>
-          <div>
+          <div data-aos="zoom-in">
             <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
               Cognome
             </label>
@@ -100,7 +108,7 @@ function Contact() {
               />
             </div>
           </div>
-          <div className="sm:col-span-2">
+          <div data-aos="zoom-in" className="sm:col-span-2">
             <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
               Azienda
             </label>
@@ -114,7 +122,7 @@ function Contact() {
               />
             </div>
           </div>
-          <div className="sm:col-span-2">
+          <div data-aos="zoom-in" className="sm:col-span-2">
             <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
               Email
             </label>
@@ -133,7 +141,7 @@ function Contact() {
               />
             </div>
           </div>
-          <div className="sm:col-span-2">
+          <div data-aos="zoom-in" className="sm:col-span-2">
             <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
               Numero di telefono
             </label>
@@ -177,7 +185,7 @@ function Contact() {
               />
             </div>
           </div>
-          <div className="sm:col-span-2">
+          <div data-aos="zoom-in" className="sm:col-span-2">
             <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
               Messaggio
             </label>
@@ -219,21 +227,21 @@ function Contact() {
               </a>
           </Switch.Group>
         </div>
-        <div className="mt-10">
+        <div data-aos="zoom-in" className="mt-10">
           <button
               disabled={state.submitting}
-              onClick={onSubmit}
+              type="submit"
               className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
               Invia!
           </button>
         </div>
-        <div className="mt-10">
+        <div data-aos="zoom-in" className="mt-10">
           <h2 className="text-2xl text-center font-semibold text-gray-900">Oppure</h2>
         </div>
 
         {/* CREAMI un componente per whatsapp business */}
-        <div className="mt-10 mx-auto max-w-2xl text-center">
+        <div data-aos="zoom-in" className="mt-10 mx-auto max-w-2xl text-center">
           <a href="https://wa.me/message/BR5B37F2EG4EH1" className="block rounded-md bg-green-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600" target="_blank" rel="noreferrer">
             Contattami su Whatsapp
           </a>
